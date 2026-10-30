@@ -3,6 +3,6 @@ services:
     name: quick-quiz-battle
     runtime: node
     plan: free
-    buildCommand: npm install
+    buildCommand: node unpack.js && npm install
     startCommand: npm start
     healthCheckPath: /
