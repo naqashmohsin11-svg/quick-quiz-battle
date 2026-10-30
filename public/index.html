@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d1b">
+  <meta name="description" content="Quick Quiz Battle — a real-time quiz showdown for 2 to 8 friends.">
+  <title>Quick Quiz Battle — Think fast. Win big.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Quick Quiz Battle home" id="brand-home">
+        <span class="brand-mark">ϟ</span>
+        <span class="brand-copy">QUICK QUIZ <b>BATTLE</b></span>
+      </a>
+      <div class="topbar-right">
+        <span class="live-indicator"><i></i> LIVE MULTIPLAYER</span>
+        <span class="players-limit">2–8 PLAYERS</span>
+      </div>
+    </header>
+
+    <main id="app" aria-live="polite">
+      <section class="loading-state panel">
+        <div class="loading-orbit"><span>ϟ</span></div>
+        <p>Connecting to the arena…</p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>QUICK QUIZ BATTLE</span>
+      <span>THINK FAST <b>·</b> ANSWER FASTER <b>·</b> WIN BIG</span>
+    </footer>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="/client.js" defer></script>
+</body>
+</html>
