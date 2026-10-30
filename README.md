@@ -12,14 +12,15 @@ A real-time multiplayer party quiz for **2–8 players**. Friends join from thei
 - Live leaderboard, answer reveal, explanations, and final winner podium
 - Responsive layout for phones, tablets, and desktop browsers
 
-## Run locally
+## Run locally from this repository
 
 Requirements: Node.js 18 or newer.
 
-1. Download or clone this repository.
-2. Run `npm start`.
-3. Open **http://localhost:3000**.
-4. To test multiplayer, open the address in two separate browser tabs, create a room in one, and join from the other using its room code.
+1. Clone or download this repository.
+2. Run `node unpack.js` once to extract the game source files.
+3. Run `npm start`.
+4. Open **http://localhost:3000**.
+5. To test multiplayer, open the address in two separate browser tabs, create a room in one, and join from the other using its room code.
 
 ## Deploy with Render
 
@@ -31,7 +32,7 @@ This repository includes a Render Blueprint (`render.yaml`).
 4. Review the service settings and click **Apply**.
 5. When the service status is **Live**, copy its public `onrender.com` address.
 
-The build step extracts the bundled source files before starting the Node.js server. The service uses the same origin for the website and WebSocket multiplayer connections.
+The Render build step extracts the bundled source files before starting the Node.js server. The website and multiplayer WebSocket connections use the same origin.
 
 ## Gameplay rules
 
@@ -48,3 +49,4 @@ The build step extracts the bundled source files before starting the Node.js ser
 - Node.js HTTP server and native WebSocket handling; no external npm packages are required.
 - Active rooms are held in memory and are cleared if the server restarts.
 - This first version does not include accounts, persistent match history, or multi-server room storage.
+- The source bundle in `bundle/` is expanded into the normal `server.js` and `public/` files by `unpack.js`.
